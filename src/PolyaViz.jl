@@ -20,7 +20,7 @@ export  pin,
         Luxor
 
 
-using Luxor, LightGraphs
+using Luxor, LightGraphs, Colors
 
 include("components/settings.jl")
 include("components/network_components.jl")
