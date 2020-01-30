@@ -24,6 +24,8 @@ export  pin,
 
 using Luxor, LightGraphs, Colors
 
+PolyaViz.SETTINGS = default_settings()
+
 include("components/settings.jl")
 include("components/graph_components.jl")
 include("components/network_components.jl")
