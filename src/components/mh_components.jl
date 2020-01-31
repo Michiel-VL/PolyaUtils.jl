@@ -45,12 +45,6 @@ end
 function sampling_data(block, ops,  deltas)
     p0, points, radius_op = block
     origin(p0)
-    min_δ = minimum(deltas)
-    max_δ = maximum(deltas)
-    mapper = construct_mapper(min_δ, max_δ)
-    cL = max(length(deltas),2)
-    colorrangeR = range(RGB(1,1,1), stop = RGB(1,0,0), length = cL+1)
-    colorrangeG = range(RGB(1,1,1), stop = RGB(0,1,0), length = cL+1)
     for (i, op) in enumerate(ops)
         if deltas[i] > 0
             operator(points[op...], radius_op; cval=RGB(1,0,0))

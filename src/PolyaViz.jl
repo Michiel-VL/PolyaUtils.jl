@@ -30,6 +30,7 @@ include("components/settings.jl")
 include("components/graph_components.jl")
 include("components/network_components.jl")
 include("components/mh_components.jl")
+include("templates.jl")
 include("extra.jl")
 
 const SETTINGS = default_settings()
