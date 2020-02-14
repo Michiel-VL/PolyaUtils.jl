@@ -1,3 +1,7 @@
+
+
+
+
 function selection(c_block, n_sel, n_acc)
     tot_sel = sum(n_sel)
     W = c_block.width; H = c_block.height
