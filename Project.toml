@@ -1,4 +1,4 @@
-name = "PolyaViz"
+name = "PolyaUtils"
 uuid = "a7680efe-4291-11ea-33dc-a95331a1cc22"
 authors = ["Michiel Van Lancker <michiel.vanlancker@cs.kuleuven.be>"]
 version = "0.1.0"

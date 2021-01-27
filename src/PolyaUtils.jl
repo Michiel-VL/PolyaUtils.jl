@@ -1,4 +1,4 @@
-module PolyaViz
+module PolyaUtils
 
 
 export  # Shapes
