@@ -5,21 +5,17 @@ using Polya
 using Tables
 using Plots
 using Cassette
-using PolyaUtils
 
-export  NeighborhoodLogger,
-        logs,
-        logged
+export  TraceLogger,
+        MetaheuristicLogging
 
 
 
 
-include("logging/NeighborhoodLogger.jl")
-
-##
-
-
-##
+include("logging.jl")
+include("context.jl")
+include("plotting.jl")
 
 
-end # module
+
+end
