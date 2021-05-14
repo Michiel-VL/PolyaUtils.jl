@@ -45,3 +45,11 @@ end
 
 # TODO
 # 1. VariablePlot
+
+function asmatrix(iter, dims...)
+    M = zeros(Int, dims...)
+    for (i,e) in enumerate(iter)
+        M[ϕ(e)...] = i
+    end
+    return M
+end

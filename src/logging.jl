@@ -12,9 +12,9 @@ end
 TraceLogger(::Type{M}, ::Type{V}) where {M,V} = TraceLogger(M[], V[], UInt64[])
 
 function log!(l::TraceLogger, move, Δv, t)
-    push!(l.times, t)
     push!(l.moves, move)
     push!(l.deltas, Δv)
+    push!(l.times, t)
     nothing
 end
 
@@ -31,5 +31,11 @@ Tables.columnaccess(::Type{TraceLogger{M,V}}) where {M,V} = false
 
 
 function Tables.rows(t::TraceLogger{M,V}) where{M,V}
-    map( x-> (iteration = x[1], move = x[2], Δv = x[3], Δt = x[4]), Iterators.zip(eachindex(t.moves), t.moves, t.deltas, Float64.(t.times)))
+    map( x-> (  iteration = x[1], 
+                move = x[2], 
+                Δv = x[3], 
+                Δt = x[4]), Iterators.zip(  eachindex(t.moves), 
+                                            t.moves, 
+                                            t.deltas, 
+                                            Float64.(t.times)))
 end
