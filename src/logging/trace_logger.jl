@@ -39,12 +39,3 @@ end
 
 
 
-function generate_random_search_data(n, D)
-    t = TraceLogger(Int, Int)
-    for i in 1:n
-        Δv = rand(D)
-        log!(t, 0, Δv, Δv ≤ 0, time_ns())
-    end
-    return t
-
-end

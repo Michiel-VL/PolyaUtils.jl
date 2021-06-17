@@ -20,3 +20,10 @@ ctx = MetaheuristicLogging(metadata=)
 
 ## Plotting
 `PolyaUtils` provides PlotRecipes for search-related structs in Polya
+
+
+
+## Visualization
+- Problem Structure
+- Quadratic Neighborhood Parameters
+- Quadratic Neighborhood Orders
