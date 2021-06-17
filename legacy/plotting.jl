@@ -1,26 +1,22 @@
-@recipe function operator_trace(trace::AbstractArray{<:Polya.AbstractOperator})
-    x, y = align(ϕ.(trace))
-    seriestype --> :scatter
-    x, y
-end
 
-@recipe function operator_trace(N::Neighborhood)
-    x, y = align(ϕ.(N))
-    seriestype --> :scatter
-    x, y
-end
 
-function align(Φ) 
-    r = Int[]
-    iterset = Int[]
-    cnt = 1
-    for el in Φ
-        push!(r, el...)
-        push!(iterset, ntuple(x->cnt, length(el))...)
-        cnt+=1
+
+
+#= TODO: check if quiverplot can be used as plotting tool for search space
+@recipe function search_structure(s0, trace::TraceLogger)
+    V = compute_objectives(s0[2], trace.Δv, trace.accepted)
+    R = rank_objectives(V)
+    it = 1
+    for (i,v) in enumerate(V)
+        x = it
+        y = R[v]
+        if A[i]
+            it+=1
+        end
+
     end
-    return iterset, r
 end
+=#
 
 
 
