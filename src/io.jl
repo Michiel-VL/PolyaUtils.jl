@@ -7,7 +7,7 @@ global const COLSET = ["values", "movename", "moveparam", "accepted", "timestamp
 Read a search string from a csv-file
 """
 function readst(fname)
-    @assert endswidth(fname, ".csv")
+    @assert endswith(fname, ".csv")
     st = CSV.read(fname, DataFrame)
     c = copy(colset)
     for v in names(st)
