@@ -20,8 +20,8 @@ function enumerationorder(n, m, order, draw_vertex, draw_edge; cell_width = 20, 
     foreach(i -> settext("$(i-1)", t[1,i], valign="top", halign="center"), 2:n+1)
     # Drawing
     ordervertices = map(o -> o .+ (1,1), order)
-    foreach(v -> draw_vertex(t[v...]), ordervertices)
-    foreach((s,d) -> draw_edge(t[s...], t[d...]), ordervertices[1:end-1], ordervertices[2:end])
+    foreach(v -> draw_vertex(t[v...],v), ordervertices)
+    foreach((s,d) -> draw_edge(t[s...], t[d...],s, d), ordervertices[1:end-1], ordervertices[2:end])
     finish()
     preview()
 end
@@ -38,13 +38,13 @@ function drawgrid(t, cell_height, cell_width)
     sethue("black")
 end
 
-function draw_param(p; color = "black", action=:fill)
+function draw_param(p, i; color = "black", action=:fill)
     sethue(color)
     ellipse(p, 3, 3, action)
     sethue("black")
 end
 
-function draw_order(p1, p2; color="black")
+function draw_order(p1, p2, s , d; color="black")
     sethue(color)
     arrow(p1, p2, arrowheadlength=7, arrowheadangle=π/10, linewidth=1)
 end
