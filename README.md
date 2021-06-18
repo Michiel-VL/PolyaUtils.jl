@@ -1,4 +1,4 @@
-# PolyaUtils
+# PolyaUtils.jl
 
 **Note: this package is a WIP and still in a very early state. Things might/will break.** 
 
@@ -8,7 +8,7 @@
 ## Visualization
 - quadratic neighborhood visualizations
 - search structure
-- 
+
 
 ## Plotting
 - descent paths
