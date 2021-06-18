@@ -1,7 +1,7 @@
 struct OperatorTrace end
 struct SearchTrace end
 
-@recipe function operator_trace(trace::DataFrame, type::Type{OperatorTrace})
+@recipe function operator_trace(df::DataFrame, type::Type{OperatorTrace})
     x, y = align(df.moveparams)
     seriestype --> :scatter
     x, y

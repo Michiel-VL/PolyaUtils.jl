@@ -7,7 +7,7 @@ using TikzPictures
 @reexport using DataFrames
 @reexport using PrettyTables
 @reexport using Luxor
-@reexport using Plots
+using RecipesBase
 
     export  SearchTrace,
             OperatorTrace,
