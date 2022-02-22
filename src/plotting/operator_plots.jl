@@ -1,5 +1,4 @@
 struct OperatorTrace end
-struct SearchTrace end
 
 @recipe function operator_trace(df::DataFrame, type::Type{OperatorTrace})
     x, y = align(df.moveparams)

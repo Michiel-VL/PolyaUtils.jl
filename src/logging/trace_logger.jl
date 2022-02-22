@@ -1,3 +1,5 @@
+# Legacy
+
 """
     TraceLogger{M,V}
 Logs a move, movedelta, acceptance and timestamp every time Δ is called. Must be used in a Cassette-context MetaheuristicLogging.

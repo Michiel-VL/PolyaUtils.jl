@@ -1,4 +1,11 @@
 ### Visualize the whole search structure of a problem
+
+function search_structure(st)
+
+
+end
+
+
 """
     search_structure(v0, trace)
 
@@ -67,7 +74,7 @@ end
 
 Given an initial solution and a search trace, compute the coordinates required to display the search process as the search for an improving path through the ranked search space.
 """
-function generate_coordinates(v0, trace; dir=:min, rev=true)
+function generate_coordinates(v0, trace; dir = :min, rev = true)
     A = trace.accepted
     V = compute_objectives(v0, trace.deltas, A)
     R = rank_objectives(V, dir = dir, rev = rev)

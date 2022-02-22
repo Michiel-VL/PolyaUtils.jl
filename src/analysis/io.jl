@@ -1,8 +1,3 @@
-using JSON3
-using JSONTables
-
-include("search_trace.jl")
-
 function Base.read(fpath::String, ::Type{SearchTrace}; accept::Symbol = :accept)
     json_string = read(fpath, String)
     stfile = JSON3.read(json_string)

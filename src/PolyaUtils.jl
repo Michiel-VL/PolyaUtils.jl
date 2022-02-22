@@ -4,7 +4,12 @@ using Reexport
 using CSV
 using Tables
 using TikzPictures
+using MetaGraphs
+using JSON3
+using JSONTables
+
 @reexport using DataFrames
+@reexport using Graphs
 @reexport using PrettyTables
 @reexport using Luxor
 using RecipesBase
@@ -33,7 +38,9 @@ using RecipesBase
 
 
 
-
+include("analysis/search_trace.jl")
+include("analysis/io.jl")
+include("analysis/graph.jl")
 
 include("io.jl") # read in data
 include("visualization/neighborhood.jl")
@@ -48,8 +55,6 @@ include("logging/trace_logger.jl")
 # include("logging/context.jl")
 
 #cdb
-include("analysis/search_trace.jl")
-include("analysis/io.jl")
-include("analysis/graph.jl")
+
 include("plotting/base.jl")
 end

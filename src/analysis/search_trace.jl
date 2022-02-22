@@ -1,13 +1,6 @@
-using DataFrames
-
-mutable struct SearchTrace{S, V}
-    # should include at least the starting objective-value
-    # OPTIONAL: representation
-    s_init::S # 
+struct SearchTrace{S, V}
+    s_init::S
     v_init::V
-    
-    # column titles for all iteration information
-    # iteration info itself should contain as many fields per entry as SearchTrace.columns
     df::DataFrame
 end
 

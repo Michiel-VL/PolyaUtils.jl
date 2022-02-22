@@ -1,8 +1,3 @@
-using Graphs
-using MetaGraphs
-
-include("search_trace.jl")
-
 # customs names should take care to set nodedata & edgedata to appropriate values.
 # nodedata:
 #   nodedata[1] should be the objective value of the selected solution
