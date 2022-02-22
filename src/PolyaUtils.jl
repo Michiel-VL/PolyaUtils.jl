@@ -23,8 +23,12 @@ using RecipesBase
             as_tex,
             as_svg,
 
-            convert_to_changes,
-            soldiff
+            read,
+            write,
+            to_df,
+            metagraph,
+            lineplot,
+            objective_plot
 
 
 
@@ -43,7 +47,9 @@ include("analysis/evaluation.jl")
 include("logging/trace_logger.jl")
 # include("logging/context.jl")
 
-
-
-
+#cdb
+include("analysis/search_trace.jl")
+include("analysis/io.jl")
+include("analysis/graph.jl")
+include("plotting/base.jl")
 end
