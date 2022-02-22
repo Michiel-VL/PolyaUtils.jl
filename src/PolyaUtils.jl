@@ -21,8 +21,23 @@ using RecipesBase
             visualizemoves,
             tolatex,
             as_tex,
-            as_svg
+            as_svg,
 
+            #cdb
+            read,
+            write,
+            metagraph,
+            to_df,
+            isaccepted,
+            init!,
+            accepted,
+            accepted!,
+            improving,
+            improving!,
+            filterdf,
+            filterdf!,
+            lineplot,
+            objective_plot
 
 
 
@@ -41,7 +56,9 @@ include("analysis/evaluation.jl")
 include("logging/trace_logger.jl")
 # include("logging/context.jl")
 
-
-
-
+#cdb
+include("analysis/search_trace.jl")
+include("analysis/io.jl")
+include("analysis/graph.jl")
+include("plotting/base.jl")
 end
