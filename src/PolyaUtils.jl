@@ -21,7 +21,10 @@ using RecipesBase
             visualizemoves,
             tolatex,
             as_tex,
-            as_svg
+            as_svg,
+
+            convert_to_changes,
+            soldiff
 
 
 
@@ -36,7 +39,6 @@ include("plotting/operator_plots.jl")
 include("plotting/objective_plots.jl")
 include("analysis/dummy_data.jl")
 include("analysis/evaluation.jl")
-
 
 include("logging/trace_logger.jl")
 # include("logging/context.jl")
